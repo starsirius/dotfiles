@@ -218,7 +218,7 @@ endfun
 " Plugin Settings
 "------------------------------------------------------------------------------
 
-" ALE
+" --- ALE
 let g:ale_linters = {
       \   'javascript': ['eslint'],
       \   'javascriptreact': ['eslint'],
@@ -238,3 +238,10 @@ let g:ale_fixers = {
       \   'typescriptreact': ['prettier', 'eslint'],
       \ }
 let g:ale_fix_on_save = 1
+
+" --- NERDTree
+map <C-n><C-n> :NERDTreeToggle<CR>
+map <C-n><C-f> :NERDTreeFind<CR>
+
+" Close vim if the only window left open is a NERDTree
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
