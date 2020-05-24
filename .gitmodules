@@ -13,3 +13,6 @@
 [submodule "vim/pack/ale/start/ale"]
 	path = vim/pack/ale/start/ale
 	url = https://github.com/dense-analysis/ale.git
+[submodule "vim/pack/nerdtree/start/nerdtree"]
+	path = vim/pack/nerdtree/start/nerdtree
+	url = https://github.com/preservim/nerdtree.git
