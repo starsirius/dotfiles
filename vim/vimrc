@@ -20,6 +20,8 @@ autocmd! bufwritepost .vimrc source ~/.vimrc
 syntax on               " Syntax highlight
 set hlsearch            " Search highlighting
 
+colors vgod
+
 set clipboard=unnamed   " Yank to the system register (*) by default
 set showmatch           " Cursor shows matching ) and }
 set showmode            " Show current mode
