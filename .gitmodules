@@ -7,3 +7,6 @@
 [submodule "vim/pack/typescript-vim/start/typescript-vim"]
 	path = vim/pack/typescript-vim/start/typescript-vim
 	url = https://github.com/leafgarland/typescript-vim.git
+[submodule "vim/pack/vim-jsx-typescript/start/vim-jsx-typescript"]
+	path = vim/pack/vim-jsx-typescript/start/vim-jsx-typescript
+	url = https://github.com/peitalin/vim-jsx-typescript.git
