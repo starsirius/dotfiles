@@ -186,9 +186,11 @@ set cot-=preview " Disable doc preview in omnicomplete
 autocmd BufNewFile,BufRead *.scss             set ft=scss.css
 autocmd BufNewFile,BufRead *.sass             set ft=sass.css
 
+
 "------------------------------------------------------------------------------
 " Encoding Settings
 "------------------------------------------------------------------------------
+
 set encoding=utf-8
 set termencoding=utf-8
 set fileencoding=utf-8
@@ -210,3 +212,29 @@ fun! Big5()
   set encoding=big5
   set fileencoding=big5
 endfun
+
+
+"------------------------------------------------------------------------------
+" Plugin Settings
+"------------------------------------------------------------------------------
+
+" ALE
+let g:ale_linters = {
+      \   'javascript': ['eslint'],
+      \   'javascriptreact': ['eslint'],
+      \   'json': ['jsonlint'],
+      \   'ruby': ['rubocop'],
+      \   'typescript': ['eslint'],
+      \   'typescriptreact': ['eslint'],
+      \ }
+let g:ale_linters_explicit = 1 " Only run linters named in ale_linters
+
+let g:ale_fixers = {
+      \   '*': ['remove_trailing_lines', 'trim_whitespace'],
+      \   'javascript': ['prettier', 'eslint'],
+      \   'javascriptreact': ['prettier', 'eslint'],
+      \   'ruby': ['rubocop'],
+      \   'typescript': ['prettier', 'eslint'],
+      \   'typescriptreact': ['prettier', 'eslint'],
+      \ }
+let g:ale_fix_on_save = 1
