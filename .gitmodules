@@ -16,3 +16,6 @@
 [submodule "vim/pack/nerdtree/start/nerdtree"]
 	path = vim/pack/nerdtree/start/nerdtree
 	url = https://github.com/preservim/nerdtree.git
+[submodule "vim/pack/auto-pairs/start/auto-pairs"]
+	path = vim/pack/auto-pairs/start/auto-pairs
+	url = https://github.com/jiangmiao/auto-pairs.git
