@@ -19,3 +19,6 @@
 [submodule "vim/pack/auto-pairs/start/auto-pairs"]
 	path = vim/pack/auto-pairs/start/auto-pairs
 	url = https://github.com/jiangmiao/auto-pairs.git
+[submodule "vim/pack/vim-surround/start/vim-surround"]
+	path = vim/pack/vim-surround/start/vim-surround
+	url = https://github.com/tpope/vim-surround.git
