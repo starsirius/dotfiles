@@ -22,3 +22,6 @@
 [submodule "vim/pack/vim-surround/start/vim-surround"]
 	path = vim/pack/vim-surround/start/vim-surround
 	url = https://github.com/tpope/vim-surround.git
+[submodule "vim/pack/vim-gitgutter/start/vim-gitgutter"]
+	path = vim/pack/vim-gitgutter/start/vim-gitgutter
+	url = https://github.com/airblade/vim-gitgutter.git

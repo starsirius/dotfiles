@@ -245,3 +245,8 @@ map <C-n><C-f> :NERDTreeFind<CR>
 
 " Close vim if the only window left open is a NERDTree
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
+" --- vim-gitgutter
+" How long (in milliseconds) to wait before updating signs.
+" Note this also controls how long vim waits before writing its swap file.
+set updatetime=100
