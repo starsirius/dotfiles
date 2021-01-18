@@ -36,8 +36,20 @@ This uses Vim's native package system (introduced in Vim 8) to manage plugins.
     git submodule update --remote
     ```
 
-- Update specific plugin to the laster master branch
+- Update a specific plugin to the laster master branch
 
     ```sh
     git submodule update --remote vim/pack/vim-javascript
+    ```
+
+- Delete a specific plugin (see `git help submodules` for more details)
+
+    ```sh
+    # git rm && git commit
+    git rm vim/pack/vim-javascript/start/vim-javascript
+    git commit
+    # Remove the entry in .git/config
+    vim .git/config
+    # Remove the git directory under .git/modules
+    rm -rf .git/modules/vim/pack/vim-javascript
     ```
