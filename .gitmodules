@@ -25,3 +25,6 @@
 [submodule "vim/pack/vim-gitgutter/start/vim-gitgutter"]
 	path = vim/pack/vim-gitgutter/start/vim-gitgutter
 	url = https://github.com/airblade/vim-gitgutter.git
+[submodule "vim/pack/sonokai/opt/sonokai"]
+	path = vim/pack/sonokai/opt/sonokai
+	url = https://github.com/sainnhe/sonokai.git
