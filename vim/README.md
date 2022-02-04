@@ -1,6 +1,4 @@
-# Dotfiles
-
-## Vim
+# Vim
 
 This uses Vim's native package system (introduced in Vim 8) to manage plugins. 
 
@@ -29,6 +27,12 @@ This uses Vim's native package system (introduced in Vim 8) to manage plugins.
     ```
 
 ### Update
+
+- Add a new plugin
+
+    ```sh
+    git submodule add https://github.com/vim-test/vim-test.git vim/pack/vim-test/start/vim-test
+    ```
 
 - Update all plugins to the latest master branch
 
