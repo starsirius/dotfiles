@@ -28,3 +28,6 @@
 [submodule "vim/pack/sonokai/opt/sonokai"]
 	path = vim/pack/sonokai/opt/sonokai
 	url = https://github.com/sainnhe/sonokai.git
+[submodule "vim/pack/vim-test/start/vim-test"]
+	path = vim/pack/vim-test/start/vim-test
+	url = https://github.com/vim-test/vim-test.git

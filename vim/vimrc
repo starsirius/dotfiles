@@ -261,3 +261,14 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 " How long (in milliseconds) to wait before updating signs.
 " Note this also controls how long vim waits before writing its swap file.
 set updatetime=100
+
+" --- test-vim
+nmap <silent> t<C-n> :TestNearest<CR>
+nmap <silent> t<C-f> :TestFile<CR>
+nmap <silent> t<C-s> :TestSuite<CR>
+nmap <silent> t<C-l> :TestLast<CR>
+nmap <silent> t<C-g> :TestVisit<CR>
+
+let test#ruby#use_binstubs = 0
+" let test#strategy = "dispatch_background"
+let test#strategy = "vimterminal"
