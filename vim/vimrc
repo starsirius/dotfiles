@@ -241,7 +241,7 @@ let g:ale_fixers = {
       \   'typescript': ['prettier', 'eslint'],
       \   'typescriptreact': ['prettier', 'eslint'],
       \ }
-let g:ale_fix_on_save = 1
+let g:ale_fix_on_save = 0
 
 " --- NERDTree
 map <C-n><C-n> :NERDTreeToggle<CR>
