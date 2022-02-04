@@ -242,6 +242,7 @@ let g:ale_fixers = {
       \   'typescriptreact': ['prettier', 'eslint'],
       \ }
 let g:ale_fix_on_save = 0
+let g:ale_floating_preview = 1
 
 " --- NERDTree
 map <C-n><C-n> :NERDTreeToggle<CR>
