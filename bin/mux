@@ -1,0 +1,36 @@
+#!/usr/bin/env bash
+# Usage: mux
+#
+# Summary: Create or reattach to tmux session
+#
+# The above will create a tmux session named after the directory you're
+# in and create a few useful default windows with a sensible layout.
+#
+# If a session already exists with the name of your directory, this command will
+# simply re-attach to that session.
+#
+# Adapted from https://github.com/hashrocket/dotmatrix.
+
+sanitize() {
+  echo "$(basename $1 | sed -e 's/\./-/g')"
+}
+
+if [ -n "$TMUX" ]; then
+  echo "ERROR: You're already in a tmux session. Nesting tmux sessions is a bad idea." >&2
+  exit 1
+fi
+
+directory="$PWD"
+name="$(sanitize $directory)"
+
+mux_file="$directory/.mux"
+[ -f $mux_file ] || mux_file="$HOME/.mux"
+
+if ! $(tmux has-session -t $name &>/dev/null); then
+  cols="$(tput cols)"
+  cd $directory
+  tmux new-session -d -n code -s $name -x${cols-150} -y50
+  name=$name source $mux_file
+fi
+
+exec tmux attach-session -t $name
