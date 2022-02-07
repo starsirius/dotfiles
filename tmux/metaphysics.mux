@@ -1,0 +1,12 @@
+# start vim
+tmux send-keys -t $name:0 'vim .' Enter
+
+# create second code window
+tmux new-window -a -d -n code -t $name:0
+
+# create another window
+tmux new-window -a -d -n test -t $name:1
+
+# create react native bundler
+tmux new-window -a -d -n server -t $name:2
+tmux send-keys -t $name:3 'yarn start' Enter

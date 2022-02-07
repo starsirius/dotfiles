@@ -1,0 +1,14 @@
+# create code window and start vim
+tmux split-window -h -t $name:0
+tmux select-layout -t $name:0 main-vertical
+tmux send-keys -t $name:0 'vim .' Enter
+
+# create another window
+tmux new-window -a -d -n test -t $name:0
+
+# create server window and start server
+tmux new-window -a -d -n server -t $name:1
+tmux split-window -h -t $name:2
+tmux select-layout -t $name:1 even-horizontal
+tmux send-keys -t $name:2.0 'yarn dev' Enter
+tmux send-keys -t $name:2.1 'yarn webpack:dev' Enter

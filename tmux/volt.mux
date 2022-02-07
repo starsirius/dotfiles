@@ -1,0 +1,21 @@
+# create code window and start vim
+tmux split-window -h -t $name:0
+tmux select-layout -t $name:0 main-vertical
+tmux send-keys -t $name:0 'vim .' Enter
+
+# create server window and start server
+tmux new-window -a -d -n server -t $name:0
+tmux split-window -h -t $name:1
+tmux split-window -h -t $name:1
+tmux split-window -h -t $name:1
+tmux select-layout -t $name:1 even-horizontal
+tmux send-keys -t $name:1.0 'foreman run bundle exec rails server' Enter
+tmux send-keys -t $name:1.1 './bin/webpack-dev-server' Enter
+tmux send-keys -t $name:1.2 'bundle exec guard' Enter
+tmux send-keys -t $name:1.3 'yarn relay --watch' Enter
+
+# create test window
+tmux new-window -a -d -n test -t $name:1
+
+# go back to the code window
+tmux select-window -t $name:0

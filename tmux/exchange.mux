@@ -1,0 +1,14 @@
+# create code window and start vim
+tmux split-window -h -t $name:0
+tmux select-layout -t $name:0 main-vertical
+tmux send-keys -t $name:0 'vim .' Enter
+
+# create server window and start server
+tmux new-window -a -d -n server -t $name
+tmux send-keys -t $name:1.0 'rails s' Enter
+
+# create test window
+tmux new-window -a -d -n test -t $name:2
+
+# go back to the code window
+tmux select-window -t $name:0
